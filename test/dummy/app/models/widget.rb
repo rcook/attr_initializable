@@ -1,5 +1,7 @@
 class Widget < ActiveRecord::Base
-  attr_accessible :manufacturer_id, :name
+  attr_initializable :manufacturer_id, :as => :admin
+  attr_accessible :name
 
   belongs_to :manufacturer
 end
+
