@@ -1,0 +1,2 @@
+module AttrInitializable
+end
