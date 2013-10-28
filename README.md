@@ -1,4 +1,8 @@
-# attr_initializable [![Install gem](https://badge.fury.io/rb/attr_initializable.png)](https://rubygems.org/gems/attr_initializable) [![Build status](https://travis-ci.org/rcook/attr_initializable.png)](https://travis-ci.org/rcook/attr_initializable)
+# `attr_initializable`
+
+[![Install gem](https://badge.fury.io/rb/attr_initializable.png)](https://rubygems.org/gems/attr_initializable)
+[![Build status](https://travis-ci.org/rcook/attr_initializable.png)](https://travis-ci.org/rcook/attr_initializable)
+[![Coverage status](https://coveralls.io/repos/rcook/attr_initializable/badge.png?branch=master)](https://coveralls.io/r/rcook/attr_initializable)
 
 Rails plugin that provides `attr_initializable` helper to declare read-only attributes that can be mass-assigned at model creation time
 
