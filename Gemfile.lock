@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    attr_initializable (0.0.1)
+    attr_initializable (0.0.2)
       rails (~> 3.2.14)
 
 GEM
