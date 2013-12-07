@@ -17,9 +17,9 @@ module AttrInitializable
   end
 
   def mass_assignment_authorizer(role = :default)
-    accessible_attributes = super
-    accessible_attributes += Array(self.class.initializable_attributes[role]) unless persisted?
-    accessible_attributes
+    authorizer = super
+    authorizer += Array(self.class.initializable_attributes[role]) unless persisted?
+    authorizer
   end
 end
  
