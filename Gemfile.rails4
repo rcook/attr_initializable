@@ -18,4 +18,5 @@ gem 'jquery-rails'
 gem 'debugger'
 gem 'coveralls', :require => false
 gem 'sqlite3'
+gem 'protected_attributes'
 
