@@ -31,5 +31,9 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
+task :test_db_reset do |t|
+  sh 'cd test/dummy/ && RAILS_ENV=test bundle exec rake db:reset'
+end
+
 task :default => :test
 
