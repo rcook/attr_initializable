@@ -12,6 +12,10 @@ rescue LoadError
   RDoc::Task = Rake::RDocTask
 end
 
+require File.expand_path('../test/test_utils', __FILE__)
+
+puts "Testing against Rails #{TestUtils.rails_version} with dummy application in #{TestUtils.dummy_app_dir}"
+
 RDoc::Task.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'AttrInitializable'
@@ -32,7 +36,7 @@ Rake::TestTask.new(:test) do |t|
 end
 
 task :test_db_reset do |t|
-  sh 'cd test/dummy/ && RAILS_ENV=test bundle exec rake db:reset'
+  sh "cd test/#{TestUtils.dummy_app_dir}/ && RAILS_ENV=test bundle exec rake db:reset"
 end
 
 task :default => :test
