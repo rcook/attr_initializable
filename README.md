@@ -6,6 +6,10 @@
 
 Rails plugin that provides `attr_initializable` helper to declare read-only attributes that can be mass-assigned at model creation time
 
+# Rails support
+
+Works with Rails 3.2.x and Rails 4.0.x with `protected_attributes` compatibility gem.
+
 # Installation
 
 Add `gem 'attr_initializable'` to your Rails' `Gemfile` and run `bundle install`.
