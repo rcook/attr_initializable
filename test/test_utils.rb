@@ -1,27 +1,22 @@
-require 'rails'
+require 'active_record'
 
 module TestUtils
   extend self
 
-  def rails_version
-    @rails_version ||= Gem::Version.new(Rails.version)
+  ACTIVE_RECORD_3_MINIMUM_VERSION = Gem::Version.new('3.2.0')
+  ACTIVE_RECORD_4_MINIMUM_VERSION = Gem::Version.new('4.0.0')
+  ACTIVE_RECORD_5_MINIMUM_VERSION = Gem::Version.new('5.0.0')
+
+  def active_record_version
+    @active_record_version ||= Gem.loaded_specs['activerecord'].version
   end
 
-  def rails_version_in_range?(minimum_version, maximum_version)
-    minimum_version = Gem::Version.new(minimum_version) if minimum_version.is_a?(String)
-    maximum_version = Gem::Version.new(maximum_version) if maximum_version.is_a?(String)
-    minimum_version <= rails_version && rails_version < maximum_version
+  def is_active_record_3?
+    ACTIVE_RECORD_3_MINIMUM_VERSION <= active_record_version && active_record_version < ACTIVE_RECORD_4_MINIMUM_VERSION
   end
 
-  def dummy_app_dir
-    major_version = if rails_version_in_range?('3.2.0', '4.0.0')
-      '3'
-    elsif rails_version_in_range?('4.0.0', '5.0.0')
-      '4'
-    else
-      raise "Unsupported Rails version #{TestUtils.rails_version}"
-    end
-    "dummy-rails#{major_version}"
+  def is_active_record_4?
+    ACTIVE_RECORD_4_MINIMUM_VERSION <= active_record_version && active_record_version < ACTIVE_RECORD_5_MINIMUM_VERSION
   end
 end
 
