@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    attr_initializable (0.1.0)
+    attr_initializable (0.1.1)
       activerecord (>= 3.2.0, < 5.0.0)
 
 GEM

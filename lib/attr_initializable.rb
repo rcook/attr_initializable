@@ -8,12 +8,6 @@ module AttrInitializable
            'Please add `protected_attributes` to your Gemfile to use `attr_initializable`.')
       end
 
-      unless ActiveRecord::Base.respond_to?('_mass_assignment_sanitizer') &&
-        ActiveRecord::Base.send('_mass_assignment_sanitizer').is_a?(ActiveModel::MassAssignmentSecurity::StrictSanitizer)
-        puts "WARNING: Running with strict mass assignment sanitizer is recommended.\n" \
-          "Please add config.active_record.mass_assignment_sanitizer = :strict to config/application.rb.\n"
-      end
-
       role = options.delete(:as) || :default
       initializable_attributes[role] ||= []
       initializable_attributes[role] += Array(attributes)

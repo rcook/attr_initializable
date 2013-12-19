@@ -6,13 +6,29 @@
 
 Rails plugin that provides `attr_initializable` helper to declare read-only attributes that can be mass-assigned at model creation time
 
-# Rails support
+# Active Record support
 
-Works with Rails 3.2.x and Rails 4.0.x with `protected_attributes` compatibility gem.
+Works with Active Record 3.2.x natively and Active Record 4.0.x with `protected_attributes` compatibility gem.
 
 # Installation
 
 Add `gem 'attr_initializable'` to your Rails' `Gemfile` and run `bundle install`.
+
+# Development notes
+
+## Running tests
+
+To run tests under Active Record 3.2.x:
+
+```bash
+BUNDLE_GEMFILE=Gemfile.rails3 rake
+```
+
+To run tests under Active Record 4.0.x:
+
+```bash
+BUNDLE_GEMFILE=Gemfile.rails4 rake
+```
 
 # Licence
 
