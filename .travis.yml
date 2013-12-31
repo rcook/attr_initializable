@@ -9,4 +9,7 @@ gemfile:
 env:
   - DB=sqlite
 before_install: gem install bundler -v=1.5.1
+script:
+  - rake
+  - gem build attr_initializable.gemspec
 
