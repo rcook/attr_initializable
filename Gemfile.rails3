@@ -4,7 +4,6 @@ gemspec
 
 gem 'activerecord', '~> 3.2.0'
 gem 'rake'
-gem 'debugger'
 gem 'coveralls', :require => false
 gem 'sqlite3'
 

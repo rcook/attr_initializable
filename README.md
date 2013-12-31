@@ -8,7 +8,9 @@ Rails plugin that provides `attr_initializable` helper to declare read-only attr
 
 # Active Record support
 
-Works with Active Record 3.2.x natively and Active Record 4.0.x with `protected_attributes` compatibility gem.
+`attr_initializable` Works with Active Record 3.2.x natively and Active Record 4.0.x with
+the `protected_attributes` compatibility gem and is tested against Ruby versions 1.9.3,
+2.0.0 and 2.1.0.
 
 # Installation
 

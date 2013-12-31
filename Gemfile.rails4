@@ -4,7 +4,6 @@ gemspec
 
 gem 'activerecord', '~> 4.0.0'
 gem 'rake'
-gem 'debugger'
 gem 'coveralls', :require => false
 gem 'sqlite3'
 gem 'protected_attributes'
