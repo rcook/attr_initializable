@@ -16,20 +16,24 @@ the `protected_attributes` compatibility gem and is tested against Ruby versions
 
 Add `gem 'attr_initializable'` to your Rails' `Gemfile` and run `bundle install`.
 
-# Development notes
 
-## Running tests
+# Contributing
 
-To run tests under Active Record 3.2.x:
+See [`.travis.yml`](https://github.com/rcook/attr_initializable/blob/master/.travis.yml)
+for details of the commands that are run as part of the Travis-CI build of this project.
+The minimum bar for all push requests is that the Travis-CI build must pass. Please also
+consider adding new tests to cover any new functionality introduced into the project.
+
+To manually run the Travis-CI verification steps on your local machine, you can use the
+following sequence of commands:
 
 ```bash
-BUNDLE_GEMFILE=Gemfile.rails3 rake
-```
-
-To run tests under Active Record 4.0.x:
-
-```bash
-BUNDLE_GEMFILE=Gemfile.rails4 rake
+# To test against Active Record 3.2.x
+BUNDLE_GEMFILE=Gemfile.rails3 bundle exec rake
+# To test against Active Record 4.0.x
+BUNDLE_GEMFILE=Gemfile.rails4 bundle exec rake
+# Build the gem
+gem build attr_initializable.gemspec
 ```
 
 # Licence
